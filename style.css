@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #app {
+    display: flex;
+    justify-content: space-between;
+    width: 75vw;
+    min-height: 600px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Add flex-wrap to handle responsiveness */
+  }
+  
+  .inventory-container,
+  .cart-container {
+    width: 48%;
+  }
+  .cart-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .inventory-container h1,
+  .cart-container h1 {
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .inventory-wrapper li,
+  .cart-wrapper li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f3e5d0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .inventory-wrapper li span,
+  .cart-wrapper li span {
+    font-size: 18px;
+  }
+  
+  button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  .inventory-wrapper li .decrement-btn,
+  .cart-wrapper li .decrement-btn {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .inventory-wrapper li .increment-btn,
+  .cart-wrapper li .increment-btn {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  .inventory-wrapper li .add-to-cart-btn {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .checkout-btn {
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #333;
+  }
+  
+  .inventory-wrapper,
+  .cart-wrapper {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  /* Responsive design for mobile */
+  @media (max-width: 768px) {
+    #app {
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+      width: 100%;
+      min-width: fit-content;
+      min-height: fit-content;
+    }
+  
+    .inventory-container,
+    .cart-container {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    
+  
+    .inventory-wrapper li span,
+    .cart-wrapper li span {
+      margin-bottom: 5px;
+    }
+  
+   
+    .checkout-btn {
+      width: 100%;
+    }
+  }
+  
