@@ -15,8 +15,9 @@ body {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap; /* Add flex-wrap to handle responsiveness */
+    border-style: solid;
+    border-color: black;
+    flex-wrap: wrap; 
   }
   
   .inventory-container,
@@ -40,15 +41,26 @@ body {
     padding: 0;
   }
   
-  .inventory-wrapper li,
-  .cart-wrapper li {
+  .inventory-wrapper li{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #f3e5d0;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+  }
+  .cart-wrapper li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3e5d0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  .cart-wrapper li span{
+    margin: 10px;
   }
   
   .inventory-wrapper li span,
@@ -67,19 +79,21 @@ body {
     outline: none;
   }
   
-  .inventory-wrapper li .decrement-btn,
-  .cart-wrapper li .decrement-btn {
+  .inventory-wrapper li .inventory_remove_qty {
     background-color: #e74c3c;
     color: white;
   }
   
-  .inventory-wrapper li .increment-btn,
-  .cart-wrapper li .increment-btn {
+  .inventory-wrapper li .inventory_add_qty {
     background-color: #2ecc71;
     color: white;
   }
   
-  .inventory-wrapper li .add-to-cart-btn {
+  .inventory-wrapper li .add_to_cart {
+    background-color: #3498db;
+    color: white;
+  }
+  .cart-wrapper li .delete {
     background-color: #3498db;
     color: white;
   }
@@ -105,7 +119,7 @@ body {
     overflow-y: auto;
   }
   
-  /* Responsive design for mobile */
+
   @media (max-width: 768px) {
     #app {
       flex-direction: column;
