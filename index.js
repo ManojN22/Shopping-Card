@@ -95,22 +95,8 @@ const Model = (() => {
       this.#onChangeInventory = cb;
     }
   }
-  const {
-    getCart,
-    updateCart,
-    getInventory,
-    addToCart,
-    deleteFromCart,
-    checkout,
-  } = API;
   return {
-    State,
-    getCart,
-    updateCart,
-    getInventory,
-    addToCart,
-    deleteFromCart,
-    checkout,
+    State,...API
   };
 })();
 
