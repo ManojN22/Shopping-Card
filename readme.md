@@ -12,7 +12,7 @@ This project is a simple shopping cart application built using HTML, CSS, and Ja
 
 1. Clone the repository to your local machine:
     ```sh
-    git clone https://github.com/yourusername/shopping-cart.git
+    git clone https://github.com/ManojN22/Shopping-Card
     ```
 2. Navigate to the project directory:
     ```sh
